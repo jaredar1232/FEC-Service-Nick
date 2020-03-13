@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const router = require('./router')
 const app = express();
-const PORT = 5001;
+const PORT = 3000;
 
 
 var colors = require('colors');
