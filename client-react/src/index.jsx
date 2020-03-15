@@ -17,9 +17,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id='base_nl'>
-        <NykeMain />
-        <SideBar />
+      <div id='main_nl'>
+        <div id='base_nl'>
+          <NykeMain />
+          <SideBar />
+        </div>
       </div>
     );
   }
