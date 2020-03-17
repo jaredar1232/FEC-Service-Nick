@@ -1,6 +1,9 @@
 import React from 'react'
 
 const SizingGuide = () => {
+/* Will need a request function passed down */
+
+
   return (
     <div id='size_guide_wrapper'>
       <div id='size_guide_header'>
