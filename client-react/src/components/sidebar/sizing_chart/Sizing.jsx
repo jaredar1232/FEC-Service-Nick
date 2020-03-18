@@ -21,6 +21,20 @@ const SizingGuide = () => {
         <li id='size_item'>M 10 / W 11.5</li>
         <li id='size_item'>M 10 / W 11.5</li>
         <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
+        <li id='size_item'>M 10 / W 11.5</li>
       </ul>
     </div>
   )

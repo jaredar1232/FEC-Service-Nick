@@ -17,4 +17,7 @@ router.route('/shoes/:_id')
   .put(controller.updateShoes)
 
 
+router.route('/shoes/:id/:color')
+  .get(/* getRestOfColors */)
+
 module.exports = router

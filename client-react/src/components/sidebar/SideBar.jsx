@@ -29,6 +29,11 @@ const Colorway = () => {
         <li id='colorway_pic'>_pic</li>
         <li id='colorway_pic'>_pic</li>
         <li id='colorway_pic'>_pic</li>
+        <li id='colorway_pic'>_pic</li>
+        <li id='colorway_pic'>_pic</li>
+        <li id='colorway_pic'>_pic</li>
+        <li id='colorway_pic'>_pic</li>
+        <li id='colorway_pic'>_pic</li>
       </ul>
     </div>
   )
