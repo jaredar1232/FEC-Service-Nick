@@ -11,13 +11,17 @@ router.route('/shoes')
   .post(controller.addShoes)
 
 
+
+router.route('/shoes/:name')
+  .get(controller.getOneShoe)
+
 // define the about route
 router.route('/shoes/:_id')
   .delete(controller.deleteShoes)
   .put(controller.updateShoes)
 
 
-router.route('/shoes/:id/:color')
+router.route('/shoes/:_id/:color')
   .get(/* getRestOfColors */)
 
 module.exports = router

@@ -24,7 +24,7 @@ const Description = () => {
         </ul>
     </div>
       <button className='readmorebtn' onClick={()=>setModal(!modal)}><span>Read More</span></button>
-      {modal && <ReadMoreModal removeModal={removeModal}/>}
+      {modal && <ReadMoreModal removeModal={removeModal}/>} {/* THIS IS HOW WE CAN RENDER AN S */}
     </div>
   )
 }

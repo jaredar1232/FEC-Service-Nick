@@ -4,7 +4,7 @@ const path = require('path');
 const router = require('./router')
 const app = express();
 const PORT = 3000;
-
+const db = require('../database-mongoose/index')
 
 var colors = require('colors');
 colors.setTheme({

@@ -5,16 +5,16 @@ import Description from './description_/Description.jsx'
 import Headline from './headline/Headline.jsx'
 
 
-const SideBar =() => {
+const SideBar =({currentShoe}) => {
   return(
     <div id='sidebar_nl'>
       <div id='sidebar_contents'>
-        <Headline />
-        <Colorway />
-        <SizingGuide />
-        <BuyButtons />
-        <Description />
-        <SideBarAccordian />
+        <Headline currentShoe={currentShoe}/>
+        <Colorway currentShoe={currentShoe}/>
+        <SizingGuide currentShoe={currentShoe}/>
+        <BuyButtons currentShoe={currentShoe}/>
+        <Description currentShoe={currentShoe}/>
+        <SideBarAccordian currentShoe={currentShoe}/>
       </div>
     </div>
   )
@@ -41,6 +41,8 @@ const Colorway = () => {
 
 
 const BuyButtons = () => {
+  //going to take ID/Size
+
   return (
     <div id='button_wrapper'>
       <button className='add_to_cart cartbtn'>Add To Cart</button>

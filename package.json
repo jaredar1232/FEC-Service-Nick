@@ -2,7 +2,7 @@
  "name": "rei_body",
  "version": "1.0.0",
  "description": "bodycomponent",
- "author": "Brandon",
+ "author": "Nick",
  "license": "",
  "engines": {
   "node": ">=6.13.0"
@@ -22,7 +22,8 @@
   "nodemon": "^2.0.2",
   "path": "0.12.7",
   "react": "16.13.0",
-  "react-dom": "16.13.0"
+  "react-dom": "16.13.0",
+  "unsplash-js": "^6.0.0"
  },
  "devDependencies": {
   "babel-core": "^6.23.1",

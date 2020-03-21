@@ -1,8 +1,12 @@
 const mongoose = require('mongoose');
 const productSchema = require('./schema')
 
+mongoose.Promise = global.Promise;
 //need to seed DB
-mongoose.connect('mongodb://localhost/NykeProducts', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+mongoose.connect('mongodb://localhost/nykeproducts', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -12,5 +16,4 @@ db.once('open', () => {
 
 var Product = mongoose.model('Product', productSchema);
 
-module.exports.Product = Product
-module.exports.db = db
+module.exports = Product
