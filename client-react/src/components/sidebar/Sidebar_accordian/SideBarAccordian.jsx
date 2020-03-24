@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from 'react'
 
-
-
 const SideBarAccordian = () => {
 
   const [dropdown, setDropdown] = useState(false)
-
 
 
   return(
     <div id='sidebar_accordian_wrapper'>
       <div>
         <button id='sidebar_accordian_button' onClick={ () => setDropdown(!dropdown) }>
-          <div>
+          <div className='sidebar_accordian_button_2'>
             <div><h3>Free Shipping & Returns</h3></div>
             <div className={`${dropdown ? "dropdown_rotate" : ""}`}><span>^</span></div>
           </div>

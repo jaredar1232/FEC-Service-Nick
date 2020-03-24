@@ -36,34 +36,6 @@ let availSizesObj =  {
   '18': null
 }
 
-// let availSizes = {
-//   812: null,
-//   81116: null,
-//   81316: null,
-//   9: null,
-//   9316: null,
-//   938: null,
-//   912: null,
-//   958: null,
-//   978: null,
-//   10: null,
-//   1018: null,
-//   1038: null,
-//   1012: null,
-//   1058: null,
-//   1078: null,
-//   11: null,
-//   1118: null,
-//   1138: null,
-//   1112: null,
-//   1158: null,
-//   1178: null,
-//   12: null,
-//   1238: null,
-//   1258: null,
-//   13: null,
-//   1338: null
-// }
 
 
 let generateRandomSizeAvail = () => {
@@ -387,32 +359,6 @@ seedMockData()
 
 
 /*
-product names
-Nike React Infinity Run Flyknit By You
-
-
-Nike Zoom Pegasus Turbo Shield
-Nike Zoom Pegasus Turbo 2
-
-bases=[
-  mercurial
-  phantom
-]
-
-Shield[Water Resistance]
-Pegasus[Low Weight]
-Air[Sole Cushion]
-
-
-AirMax[270, React][SE]
-
-
-
-[Epic[Phantom], Odyssey, Legend]React[A.I.R, ENG, Vision, Presto, HyperSet, Element 55, Sertu, Ianga, Terra Globe, HyperSet, Infinity Run, ][Shield[2, 3], FlyKnit[2, 3]][SE]
-[Jordan]React[Havoc]
-[Air] Zoom[X] [Freak, Vomero[14,15], WildHorse[4, 5], Terra Kiger[5, 6], Fly 3[Premium], Pegasus[35, 36][FlyEase, Turbo[2, 3], Vaporfly[4%, NEXT%]]] [Trail, FlyKnit, Shield, Rise][SE]
-
-
 
 Zoom-Ultra-light Nike ZoomX foam delivers Nike Running's greatest energy return yet.
     -Engineered heel collar tapers away from your foot for comfort around your Achilles tendon.
@@ -424,34 +370,23 @@ Trail-Outsole lugs optimize traction when running uphill.
 Vaporfly- VaporWeave material up top is an engineered woven mesh that’s light and breathable while giving a secure, comfortable fit.
 FlyKnit - Flyknit constructed upper provides lightweight breathability and support.
 
+
+
 Nike React Vision
 SURREAL COMFORT. BORN FROM DREAMS.
-
 The Nike React Vision is a story of surreal comfort. Layered textures, shapes and vivid colors combine in a design influenced by the exaggerated world of our dreams, while React foam and an ultraplush tongue provide surreal comfort. DIMSIX on the tongue tab rises high off the collar to add just a touch of Nike’s own origin story.
-
 Dreamworld Extravagance
-
 The colors are inspired by Mexico City's famous Casa Gilardi. Richly textured fabrics add to the continuously shifting sensation. In combination with a transparent heel clip and distorted sides, they create a unique layered look.
-
 Futuristic Materials
-
 The revolutionary seamless mesh on the upper allows for color pops and surreal textures. Its subtle pattern, which was inspired by poison dart frogs, adds the perfect amount of bite to your look.
-
 Dreamlike Comfort
-
 Nike React foam delivers unrivaled all-day comfort while the ultra plush tongue combines with the padded heel for a soft, dreamlike feel.
-
 DIY Style
-
 Exposed stitching on the heel and tongue combines with the patchwork eyestays for a multi-dimensional, DIY look.
-
 Product Details
-
     Rubber pods on sole add traction and durability
     D/MS/X label on pull tabs and insole
     Outlined Swoosh is printed on side
-    Shown: Light Bone/Photo Blue/Team Red/Terra Blush
-    Style: CD4373-001
 
 
 
@@ -459,7 +394,6 @@ Product Details
 
 Nike Air Zoom  Pegasus 36 Trail
 FIND YOUR WINGS.
-
 An icon trades pavement for path with the Nike Air Zoom Pegasus 36 Trail. Give your feet some fresh air in a perforated mesh upper, as double Zoom Air units underfoot cushion your stride. Opposing lugs on outsole optimize traction on your uphill climbs.
 
 Benefits
@@ -473,81 +407,24 @@ Benefits
 
 
 
-Nike Air Max 270 React ENG
-FAST-PACED STYLE, ELEVATED.
-
-Refresh your step in the Nike Air Max 270 React ENG. Featuring the same details as the OG, it offers sleeker lines and radiating TPU fingers that illuminate your fresh style. Lightweight, no-sew materials create a modern aesthetic that looks as good as it feels.
-
-Benefits
-
-    Full Nike React foam midsole with Max Air unit deliver unrivaled comfort.
-    Nike React technology delivers an extremely smooth ride.
-    Phylon foam feels soft and comfortable all day long.
-    Heel-to-toe rubber adds traction and durability.
-    Soft, padded collar with low-cut design feels comfortable.
-
-
-Product Details
-
-    Pull tab on heel and tongue
-    Shown: Light Smoke Grey/Smoke Grey/Black/Battle Blue
-    Style: CJ0579-001
-
-
-
-
-
-
-
-
-
-
-
-Nike Zoom Rival S 9
-DYNAMIC PERFORMANCE
-
-Designed with the sprinter in mind, the Nike Zoom Rival S 9 Unisex Track Spike is ideal for short distances, hurdles and jumping events. A soft, foot-conforming sockliner provides incredible comfort, while a rigid plate extends under the arch and includes strategic spike receptacles for maximum power, speed and traction.
-
-Benefits
-Synthetic and textile construction for durable support
-Internal arch band provides a locked-down feel
-Foam sockliner conforms to the shape of your foot for comfortable support
-Removable spike receptacles for excellent traction
-Rubber, horizontal traction pattern enhances grip and durability
-Shown: Laser Crimson/Black/University Red/White
-Style: 907564-604
-
-
-
-
 
 
 Nike Air Zoom Terra Kiger 6
 TOUGH TERRAIN TACKLER.
-
 The Nike Air Zoom Terra Kiger 6 is built to take on wet and rocky trails. Lightweight in design, it features a sleeker look with a woven heel for a secure fit and feel.
-
 Faster, Sleeker, Stronger
-
 Mesh at the forefoot feels lightweight and enhances ventilation. A woven heel delivers a secure, stable fit.
-
 Cushioned Responsiveness
-
 Nike React technology delivers a smooth, responsive ride. A Zoom Air unit in the heel provides extra cushioning.
-
 Multi-Surface Traction
-
 Multidirectional traction lugs in the forefoot and heel are made from high-abrasion rubber for enhanced grip on descents and ascents. A rubber pod at the midfoot helps deliver wet-surface traction.
-
 More Benefits
-
     Padded tongue helps relieve pressure caused by foot swelling over long mileage runs.
     Segmented rock plate in the forefoot helps shield your foot on rough terrain without sacrificing flexibility or ground feel.
     Midfoot lacing system helps provide snug support.
 
 
 Product Details
-
     Weight: 10.26oz (Men's size 10)
     Offset: 4mm (Forefoot: 10.5mm, Heel: 14.5mm)
     Synthetic leather and textiles materials in upper
@@ -561,30 +438,20 @@ Product Details
 
 Nike Wildhorse 6
 STABLE COMFORT FOR THE TRAILS.
-
 The Nike Wildhorse 6 keeps it stable, secure and lightweight on the trail. An updated outsole delivers the traction you need, while a foam midsole keeps you cushioned on your run.
-
 Trail-Ready Traction
-
 A full-rubber outsole features abrasion-resistant materials in the forefoot and heel, with sticky rubber in the middle for grip. An anti-clog coating across the outsole helps keep dirt out.
-
 Responsive Cushioning
-
 Nike React foam provides a soft, smooth ride that adds a little spring to your step. Extra cushioning in the heel creates stability and helps keep your foot on the platform.
-
 Breathable and Long-lasting
-
 Mesh at the forefoot enhances ventilation and combines with materials along the toe to help prevent abrasion.
-
 More Benefits
-
     Collar around the ankle hugs your foot while helping prevent dirt and debris from entering the shoe.
     Thin tongue features segmented padding to help cut down on lace pressure.
     Utility tab in the back for easy on and off.
 
 
 Product Details
-
     Weight: 11.39oz (Men's size 10)
     Offset: 8mm (Forefoot 14.5mm, Heel: 22.5mm)
     Synthetic and textile materials in upper
@@ -596,34 +463,23 @@ Product Details
 
 Nike CruzrOne
 MADE TO KEEP YOU MOVING.
-
 Designed for steady, easy-paced movement, the Nike CruzrOne keeps you going. Its rocker-shaped sole and plush, lightweight cushioning let you move naturally and comfortably. The padded collar is lined with soft wool, adding luxury to every step, while mesh details let your foot breathe. There’s no finish line—there’s only you, one step after the next.
-
 Rocker-Shaped Design
-
 The outsole is angled to create an incredibly smooth heel-to-toe transition during use.
-
 Made to Move
-
 Stacked Nike React foam in the heel feels incredibly soft and tapers to the toe, allowing you to move freely.
-
 All-Day Wear
-
 The low-cut collar adds a sleek, streamlined look. Thick padding and super-soft wool lining add to the comfort.
-
 Supportive And Ventilated
-
 No-sew details combine with stitched overlays for added durability, while mesh and perforations on the sides help your foot breathe.
 
 More Benefits
-
     Rubber sole adds traction and durability.
     Wool lining is quick-drying and can be worn with or without socks.
     Midsole design mimics circular pattern on the heel for a unified look.
 
 
 Product Details
-
     Last: MR-44
     Offset: 14mm (28mm heel, 14mm forefoot)
     Traditional lacing
@@ -635,28 +491,20 @@ Product Details
 Nike React Infinity Run Flyknit
 DESIGNED TO KEEP RUNNING, FEARLESSLY.
 
+
 The Nike React Infinity Run Flyknit is designed to help reduce injury and keep you on the run. More foam and improved upper details provide a secure and cushioned feel. Lace up and feel the potential as you hit the road.
-
 A Lightweight Fit
-
 An all-new version of Flyknit is stronger and more durable than previous versions. Lightweight and flexible, it features 3 distinct layers to help keep your foot secure.
-
 A Stable Feel
-
 Higher foam stack heights provide a softer feel. A wider shape provides a more stable ride, helping release energy with every step.
-
 A Smooth Ride
-
 The shape of the Nike React foam midsole provides support for the 3 phases of a runner's stride. It helps create flexibility at toe-off, a smooth ride at mid-stance and cushioning at contact.
-
 More Benefits
-
     Less material in the shoe means you're closer to the foam, creating a softer, more responsive experience.
     Increased rubber at the outsole helps deliver traction and durability.
 
 
 Product Details
-
     Weight: 10.27oz (Men's size 10)
     Offset: 9mm (Forefoot: 24mm, Heel: 33mm)
     Shown: Black/Red Orbit/Photo Blue/White
@@ -664,69 +512,36 @@ Product Details
 
 
 Testing
-
 In testing*, the Nike React Infinity Run reduced injuries by 52% compared to the Nike Air Zoom Structure 22. *The Nike React Infinity Run reduced running injuries by 52% compared to the Nike Air Zoom Structure 22 in a study of 226 men and women during a 12 week run training program (injury = missing 3 or more consecutive runs due to running related pain). Our study found that 30.3% of Nike Air Zoom Structure 22 runners experienced an injury but only 14.5% of Nike React Infinity Run runners experienced an injury.
 
 
 
-quickInfo: ["LIGHTWEIGHT COMFORT.", "MODERN STYLE"],
-productDescription: "The Nike Air Max 270 React uses lightweight, layered, no-sew materials to create a modern style that looks as good as it feels."
-
-["All-Day Comfort", "Max Air 270 unit and full Nike React foam midsole deliver unrivaled, all-day comfort from heel to toe."]
-
-["Light as Air", "Nike React technology delivers an extremely smooth ride, reduces weight and adds flexibility. Woven fabric provides a lightweight fit and feel."]
-
-["Responsive Cushioning", "Phylon foam helps to absorb body weight and improve transition."]
-
-["Maximum Durability", "Full heel-to-toe rubber coverage enhances durability."]
-
-["Elevated Materials", "The synthetic material that resembles bubble wrap on the tongue, eyestay and collar areas adds playful style with texture and depth."]
-
-Product Details
-    Speed lacing system with traditional tongue
-    Soft, minimal collar
-    Pull tab loop for easy entry
-
 
 LIGHTWEIGHT COMFORT. MODERN STYLE.
-
 Nike's first lifestyle Air Max meets the softest, smoothest and most resilient foam yet in the Nike Air Max 270 React. The design draws from the Air Max pantheon, showcasing Nike's greatest innovation with its large window. Details on the upper take inspiration from bubble wrap and add a playful, modern style that looks as good as it feels.
-
 All-Day Comfort The eye-catching Max Air 270 unit and full Nike React foam midsole deliver all-day comfort from heel to toe.
-
 Light as Air Nike React technology delivers an extremely smooth ride, reduces weight and adds flexibility. Fabric on the upper provides lightweight comfort.
-
-
 Product Details
-
     Synthetic and fabric upper
     Swoosh keychain inspired by air freshener
 
 
 ["MAX AIR.", "MAX COMFORT."]
-
 Inspired by energy patterns radiating from Earth—like the flow of lava and ocean waves—the Nike Air Max 200 offers a springy Air Max unit for flawless comfort. With exceptional cushioning and modern detailing, this shoe radiates cool.
-
 ["Maximum Air", "Visible from the side, the brand-new Max Air unit provides more Air underfoot while the lightweight, breathable mesh in the upper contours the foot. Rubber under the Max Air unit creates a larger profile."]
-
 ["All-Day Comfort", "Cushlon foam offers remarkable underfoot cushioning for all-day comfort. Exposed foam in the sole helps to reduce weight and adds flexibility."]
-
 ["Modern Look", "Lightweight TPU frame and no-sew skins skins create a modern, sporty aesthetic."]
-
 ["Added Durability", "Full heel-to-toe rubber coverage on the outsole increases durability."]
 
 Fossil/Black/Pistachio Frost/White
 Black/Cosmic Fuchsia/Limelight/Hyper Pink
 
 
-
-
 ["OG STYLE MEETS", "MODERN COMFORT."]
 
+
 Redesigned for casual wear, the Nike Air Max 90 SE stays true to its '90s running roots. Bold colors combine with Max Air cushioning for all-day comfort while iconic details like the rubber Waffle outsole, stitched overlays and TPU counter nod to heritage style.
-
 Benefits
-
     Removable logo at tongue lets you switch up your look.
     Max Air cushioning in the heel provides all-day comfort.
     Padded collar feels soft and comfortable.
@@ -735,11 +550,8 @@ Benefits
 
 
     BIG COMFORT. BIGGER PERSONALITY.
-
 The Nike React Presto Premium features an innovative React foam midsole that delivers a futuristic look and bouncy, lightweight feel for all-day comfort with a whole lot of personality.
-
 Benefits
-
     Nike React technology delivers an extremely smooth ride.
     Stretchy mesh upper provides breathability and a relaxed feel.
     Numerous lacing options let you customize the look.
@@ -750,23 +562,14 @@ Benefits
 
 
 TOUGH TERRAIN TACKLER.
-
 The Nike Air Zoom Terra Kiger 6 is built to take on wet and rocky trails. Lightweight in design, it features a sleeker look with a woven heel for a secure fit and feel.
-
 Faster, Sleeker, Stronger
-
 Mesh at the forefoot feels lightweight and enhances ventilation. A woven heel delivers a secure, stable fit.
-
 Cushioned Responsiveness
-
 Nike React technology delivers a smooth, responsive ride. A Zoom Air unit in the heel provides extra cushioning.
-
 Multi-Surface Traction
-
 Multidirectional traction lugs in the forefoot and heel are made from high-abrasion rubber for enhanced grip on descents and ascents. A rubber pod at the midfoot helps deliver wet-surface traction.
-
 More Benefits
-
     Padded tongue helps relieve pressure caused by foot swelling over long mileage runs.
     Segmented rock plate in the forefoot helps shield your foot on rough terrain without sacrificing flexibility or ground feel.
     Midfoot lacing system helps provide snug support.
@@ -775,11 +578,8 @@ More Benefits
 
 
 LIGHTWEIGHT SUPPORT. SLEEK DESIGN.
-
 The Nike Air Zoom Structure 22 Men's Running Shoe looks fast and feels secure. Engineered mesh, a heel overlay and dynamic support throughout the midfoot all work together to provide a smooth, stable ride.
-
 Benefits
-
     Flywire cables secure the top of your foot.
     Engineered mesh provides targeted ventilation and support.
     Dynamic Support provides a smooth, stable transition.
@@ -791,7 +591,6 @@ Benefits
 
 
 FIND YOUR WINGS.
-
 An icon trades pavement for path with the Nike Air Zoom Pegasus 36 Trail. Give your feet some fresh air in a perforated mesh upper, as double Zoom Air units underfoot cushion your stride. Opposing lugs on outsole optimize traction on your uphill climbs.
 
 Benefits
@@ -819,11 +618,17 @@ Absorbs Impact
 The rubber outsole helps absorb impact and provide multi-surface traction.
 
 More Benefits
-
     An ultralight Nike ZoomX midsole delivers Nike Running's greatest energy return yet.
     The engineered heel collar tapers away from foot for comfort around your Achilles tendon.
     An angled heel optimizes initial touchdown and provides a smooth transition.
 
+
+Zoom
+React
+
+
+
+FreeNR
 
 
 
@@ -844,3 +649,8 @@ Beechtree/Cargo Khaki/Bright Crimson/Off Noir
 Oil Grey/Black/Wolf Grey/Barely Grey
 Dune Red/Mahogany/Team Orange/Burgundy Ash
 */
+
+
+
+
+

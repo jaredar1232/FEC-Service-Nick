@@ -1,15 +1,6 @@
 import React,{ useState } from 'react'
 
-const Description = () => {
-  const randomStyleIDGenerator = () => {
-    let letters = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 2).toUpperCase();
-    let fourcode = Math.floor(Number.parseFloat(Math.random()).toPrecision(4)*10000);
-    let twocode = Math.floor(Number.parseFloat(Math.random()).toPrecision(2)*100);
-
-    let id = `${letters}${fourcode} - ${twocode}`
-    return id
-  }
-  let id = randomStyleIDGenerator()
+const Description = ({currentShoe}) => {
 
   const [modal, setModal] = useState(false)
 
@@ -19,39 +10,43 @@ const Description = () => {
       <div id='sidebar_description'>
         <p>The Nike React Vision is a story of surreal comfort. Layered textures, shapes and vivid colors combine in a design influenced by the exaggerated world of our dreams, while React foam and an ultraplush tongue provide surreal comfort. DIMSIX on the tongue tab rises high off the collar to add just a touch of Nike’s own origin story.</p>
         <ul>
-          <li>Shown: Light Bone/Photo Blue/Team Red/Terra Blush</li> {/* These will be tags for mongoDB */}
-          <li>Style: {id}</li>
+          <li>Shown: {currentShoe.colorStyles.join('/')}</li>
+          <li>Style: {currentShoe.productDetails.style}</li>
         </ul>
     </div>
-      <button className='readmorebtn' onClick={()=>setModal(!modal)}><span>Read More</span></button>
-      {modal && <ReadMoreModal removeModal={removeModal}/>} {/* THIS IS HOW WE CAN RENDER AN S */}
+      <button className='readmorebtn' onClick={()=>setModal(!modal)}>
+        <span>Read More</span>
+      </button>
+      {modal && <ReadMoreModal removeModal={removeModal} currentShoe={currentShoe}/>}
     </div>
   )
 }
 
 
 
-const ReadMoreModal = (props) => {
+const ReadMoreModal = ({removeModal, currentShoe}) => {
   return (
     <div className='read_more_modal'>
-
-
           <div className='read_more_modal_headline'>
-            <button onClick={props.removeModal} >
+            <button onClick={removeModal} >
               <div className='read_more_modal_headline_content'>
-                <div className='read_more_modal_pic'>_pic</div>
+                <div className='read_more_modal_pic_wrapper'>
+                  <img className='read_more_modal_pic'src={currentShoe.productPictures[0]}></img>
+                </div>
                 <div className='read_more_modal_headline_info'>
-                  <p>Nike Blazer Mid Premium</p>
-                  <p>$ 140</p>
+                  <p>{currentShoe.name}</p>
+                  <p>$ {currentShoe.price}</p>
                 </div>
               </div>
             </button>
-            <div className='read_more_modal_close' onClick={props.removeModal}>X</div>
+            <div className='read_more_modal_close' onClick={removeModal}>X</div>
           </div>
 
         <div className='read_more_modal_guts'>
           <div className='read_more_modal_info'>
-              <b>BIG COMFORT. BIGGER PERSONALITY.</b>
+              <div id='readMore_headline_text'>
+                <b>BIG COMFORT. BIGGER PERSONALITY.</b>
+              </div>
               <p>
                 The Nike React Presto Premium features an innovative React foam midsole that delivers a futuristic look and bouncy, lightweight feel for all-day comfort with a whole lot of personality.
               </p>
@@ -68,8 +63,11 @@ const ReadMoreModal = (props) => {
               <ul>
                 <b>Product Details</b>
                 <li>Not intended for use as Personal Protective Equipment</li>
-                <li> Shown: Pistachio Frost/White/Black</li>
-                <li>Style: CN7664-300</li>
+                <li>Shown: {currentShoe.colorStyles.join('/')}</li>
+                <li>Style: {currentShoe.productDetails.style}</li>
+                <li>Offset: {currentShoe.productDetails.offset}</li>
+                <li>Weight: {currentShoe.productDetails.weight}g</li>
+                <li>Last: {currentShoe.productDetails.last}</li>
               </ul>
           </div>
         </div>

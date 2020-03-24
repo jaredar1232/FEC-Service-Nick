@@ -5,14 +5,14 @@ import Description from './description_/Description.jsx'
 import Headline from './headline/Headline.jsx'
 
 
-const SideBar =({currentShoe}) => {
+const SideBar =({currentShoe, updateCurrentOrder, purchaseShoe}) => {
   return(
     <div id='sidebar_nl'>
       <div id='sidebar_contents'>
         <Headline currentShoe={currentShoe}/>
         <Colorway currentShoe={currentShoe}/>
-        <SizingGuide currentShoe={currentShoe}/>
-        <BuyButtons currentShoe={currentShoe}/>
+        <SizingGuide currentShoe={currentShoe} updateCurrentOrder={updateCurrentOrder}/>
+        <BuyButtons currentShoe={currentShoe} purchaseShoe={purchaseShoe}/>
         <Description currentShoe={currentShoe}/>
         <SideBarAccordian currentShoe={currentShoe}/>
       </div>
@@ -40,12 +40,14 @@ const Colorway = () => {
 }
 
 
-const BuyButtons = () => {
+const BuyButtons = ({purchaseShoe}) => {
   //going to take ID/Size
 
   return (
     <div id='button_wrapper'>
-      <button className='add_to_cart cartbtn'>Add To Cart</button>
+      <button className='add_to_cart cartbtn' onClick={purchaseShoe}>
+        Add To Cart
+      </button>
       <button className='favorite cartbtn'>Favorite</button>
     </div>
   )
