@@ -5,11 +5,11 @@ import Headline from '../sidebar/headline/Headline.jsx'
 
 const NykeMain = ({currentShoe}) => {
 
-  /* Create Modal */
-
+  //toggle modal for pictures
   const [modal, setModal] = useState(false)
-
+  //pass function down to toggle modal
   const removeModal = () => { setModal(false)}
+
   return(
     <div id='nyke_main_nl'>
       <div id='nyke_product_display'>

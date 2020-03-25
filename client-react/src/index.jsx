@@ -97,7 +97,7 @@ const PurchaseModal = ({currentShoe, closePurchaseShoe}) => {
     <div className='purchase_modal'>
       <div className='purchase_modal_detail_box'>
         <div className='purchase_modal_headline'>
-          <p>Added To Cart!</p>
+          <p><i class="fas fa-check-circle"></i> Added To Cart!</p>
           <div onClick={closePurchaseShoe}>X</div>
         </div>
         <div className='purchase_modal_product'>

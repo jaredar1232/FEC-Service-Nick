@@ -48,7 +48,7 @@ const BuyButtons = ({purchaseShoe}) => {
       <button className='add_to_cart cartbtn' onClick={purchaseShoe}>
         Add To Cart
       </button>
-      <button className='favorite cartbtn'>Favorite</button>
+      <button className='favorite cartbtn'>Favorite <i class="far fa-heart"></i></button>
     </div>
   )
 }
