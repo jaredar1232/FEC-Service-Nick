@@ -43,37 +43,3 @@ let productSchema = mongoose.Schema({
 
 
 module.exports = productSchema
-
-
-
-/*
-
-availSizes: {
-    3.5: null,
-    4: null,
-    4.5: null,
-    5: null,
-    5.5: null,
-    6: null,
-    6.5: null,
-    7: null,
-    7.5: null,
-    8: null,
-    8.5: null,
-    9: null,
-    9.5: null,
-    10: null,
-    10.5: null,
-    11: null,
-    11.5: null,
-    12: null,
-    12.5: null,
-    13: null,
-    13.5: null,
-    14: null,
-    15: null,
-    16: null,
-    17: null,
-    18: null
-}
-*/

@@ -9,7 +9,8 @@
  },
  "scripts": {
   "start": "nodemon ./server/index.js",
-  "dev:react": "webpack -d --watch"
+  "dev:react": "webpack -d --watch",
+  "db:seed": "node database-mongoose/seed.js"
  },
  "dependencies": {
   "axios": "0.19.2",

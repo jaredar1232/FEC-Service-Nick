@@ -25,18 +25,6 @@ module.exports = {
 				res.status(400).send();
 			});
 	},
-	addShoes: (req, res) => {
-		console.log("Post Request Recieved");
-		db.postOne()
-			.then(_id => {
-				console.log("Insert Request".cyan, " Success".green);
-				res.status(200).send(_id);
-			})
-			.catch(e => {
-				console.log("Insert Request".cyan, " UnSuccessFul".red);
-				res.status(400).send();
-			});
-	},
 	deleteShoes: (req, res) => {
 		//massage data
 		db.deleteOne()
@@ -60,10 +48,5 @@ module.exports = {
 				console.log(e, "Update Request".cyan, " UnSuccessFul".red);
 				res.status(400).send();
 			});
-	},
-
-	tester: (req, res) => {
-		console.log("Something worked".cyan);
-		res.status(200).send();
 	}
 };

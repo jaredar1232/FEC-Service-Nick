@@ -397,6 +397,7 @@ SIDE BAR ACCORDIAN ____________________________________________
   font-weight: 600;
   position: fixed;
   z-index: 1000;
+  cursor: pointer;
 }
 
 .modal_scroll{

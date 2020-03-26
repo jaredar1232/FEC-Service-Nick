@@ -4,7 +4,6 @@ const SideBarAccordian = () => {
 
   const [dropdown, setDropdown] = useState(false)
 
-
   return(
     <div id='sidebar_accordian_wrapper'>
       <div>

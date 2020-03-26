@@ -9,7 +9,6 @@ router.use(function timeLog(req, res, next) {
 router
 	.route("/shoes")
 	.get(controller.getShoes)
-	.post(controller.addShoes);
 
 router.route("/shoes/:name").get(controller.getOneShoe);
 
@@ -20,5 +19,7 @@ router
 	.put(controller.updateShoes);
 
 router.route("/shoes/:_id/:color").get(/* getRestOfColors */);
+
+
 
 module.exports = router;

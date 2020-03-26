@@ -38,6 +38,9 @@ let availSizesObj =  {
 
 
 
+
+
+
 let generateRandomSizeAvail = () => {
   let randoSize = {}
   for(let size in availSizesObj){
@@ -183,6 +186,9 @@ const generateReactShoeName = () => {
   if(Math.random() >= 0.90){
     shoe = `${shoe} (SE)`
   }
+
+
+
 
   //console.log(shoe)
   return `Nike ${shoe}`

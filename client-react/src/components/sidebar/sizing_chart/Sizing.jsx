@@ -3,8 +3,6 @@ import React, {useState} from 'react'
 const SizingGuide = ({currentShoe, updateCurrentOrder}) => {
 /* Will need a request function passed down */
   let sizes = currentShoe.availSizes
-
-
   //replace X's with colons
   for(let key in sizes){
     if(key.includes('x')){
@@ -12,7 +10,7 @@ const SizingGuide = ({currentShoe, updateCurrentOrder}) => {
       //key = key.replace(/x/g, ".");
       sizes[newValue] = sizes[key]
       delete sizes[key]
-      console.log(key, newValue)
+      //console.log(key, newValue)
     }
   }
   let [selectedSize, setSelectedSize] = useState(null)
