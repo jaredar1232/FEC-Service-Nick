@@ -5,6 +5,7 @@ const Description = ({currentShoe}) => {
   const [modal, setModal] = useState(false)
 
   const removeModal = () => { setModal(false)}
+
   return(
     <div id='sidebar_wrapper'>
       <div id='sidebar_description'>

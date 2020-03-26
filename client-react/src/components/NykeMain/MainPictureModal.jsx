@@ -8,7 +8,7 @@ const MainPictureModal = ({removeModal, currentShoe}) => {
         <div className='modal_scroll'>
           <div id='modal_headline'>
             <div id='modal_price'>
-              <h2>Men's Shoe</h2>
+              <h2>{currentShoe.type}</h2>
               <div>{currentShoe.price}</div>
             </div>
             <h1 id='modal_product_title'>{currentShoe.name}</h1>

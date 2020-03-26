@@ -1,4 +1,4 @@
-[
+const rawData = [
 
   {
       "name":"Nike React Sertu 4",
@@ -6729,3 +6729,20 @@
   }
 
 ]
+
+
+const properFormat = rawData.map((shoe) => (
+   {
+    name: shoe.name,
+    gender: shoe.gender,
+    discountPrice: shoe.discountPrice,
+    price: shoe.price,
+    type: shoe.type,
+    colorStyles: shoe.colorStyles,
+    productPictures: shoe.productPictures,
+    productDetails: shoe.productDetails,
+    availSizes: shoe.availSizes
+   }
+))
+
+module.exports =  properFormat;

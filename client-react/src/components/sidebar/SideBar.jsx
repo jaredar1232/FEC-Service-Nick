@@ -4,12 +4,12 @@ import SideBarAccordian from "./Sidebar_accordian/SideBarAccordian.jsx";
 import Description from "./description_/Description.jsx";
 import Headline from "./headline/Headline.jsx";
 
-const SideBar = ({ currentShoe, updateCurrentOrder, purchaseShoe }) => {
+const SideBar = ({ currentShoe, updateCurrentOrder, purchaseShoe, shoeSet, setColorWayShoe}) => {
 	return (
 		<div id='sidebar_nl'>
 			<div id='sidebar_contents'>
 				<Headline currentShoe={currentShoe} />
-				<Colorway currentShoe={currentShoe} />
+				<Colorway currentShoe={currentShoe} shoeSet={shoeSet} setColorWayShoe={setColorWayShoe}/>
 				<SizingGuide currentShoe={currentShoe} updateCurrentOrder={updateCurrentOrder} />
 				<BuyButtons currentShoe={currentShoe} purchaseShoe={purchaseShoe} />
 				<Description currentShoe={currentShoe} />
@@ -19,18 +19,20 @@ const SideBar = ({ currentShoe, updateCurrentOrder, purchaseShoe }) => {
 	);
 };
 
-const Colorway = () => {
+const Colorway = ({shoeSet, setColorWayShoe}) => {
+
 	return (
 		<div id='colorway_wrapper'>
 			<ul id='colorway_list'>
-				<li id='colorway_pic'>_pic</li>
-				<li id='colorway_pic'>_pic</li>
-				<li id='colorway_pic'>_pic</li>
-				<li id='colorway_pic'>_pic</li>
-				<li id='colorway_pic'>_pic</li>
-				<li id='colorway_pic'>_pic</li>
-				<li id='colorway_pic'>_pic</li>
-				<li id='colorway_pic'>_pic</li>
+				{
+				shoeSet === undefined ? <li id='colorway_pic'></li> :
+				shoeSet.map((shoe, index) => {
+					return (
+						<li id='colorway_pic' key={index} onClick={()=>setColorWayShoe(shoe)}>
+							<img src={shoe.productPictures[0]} className='colorway_img'/>
+						</li>
+					)
+				})}
 			</ul>
 		</div>
 	);

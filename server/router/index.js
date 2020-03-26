@@ -10,15 +10,13 @@ router
 	.route("/shoes")
 	.get(controller.getShoes)
 
-router.route("/shoes/:name").get(controller.getOneShoe);
+router.route("/shoes/:name").get(controller.getShoes);
 
 // define the about route
 router
 	.route("/shoes/:_id")
 	.delete(controller.deleteShoes)
 	.put(controller.updateShoes);
-
-router.route("/shoes/:_id/:color").get(/* getRestOfColors */);
 
 
 

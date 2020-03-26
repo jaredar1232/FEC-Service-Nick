@@ -415,7 +415,7 @@ let generateZoomShoe = (givenName) => {
 
 
   //stacey!!!!
-  shoe.type = `${returnShoeType(shoe.gender)} Shoe`
+  shoe.type = `${returnShoeType(shoe.gender)} Running Shoe`
   shoe.collection = shoe.name.split(' ')
   shoe.image = shoe.productPictures[0]
 
@@ -482,7 +482,7 @@ let generateRandomFreeRunShoe = (givenName) => {
 
 
   //stacey!!!!
-  shoe.type = `${returnShoeType(shoe.gender)} Shoe`
+  shoe.type = `${returnShoeType(shoe.gender)} Running Shoe`
   shoe.collection = shoe.name.split(' ')
   shoe.image = shoe.productPictures[0]
 

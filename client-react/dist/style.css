@@ -16,6 +16,7 @@ grid-gap: 10px;
 #main_nl{
   width: 100vw;
   height: auto;
+  grid-area: body;
 }
 
 #base_nl{
@@ -79,26 +80,39 @@ grid-gap: 10px;
   margin-top: 48px;
 }
 
-#sidebar_headline{
+.sidebar_headline{
   margin-bottom: 8px;
-}
-
-
-#sidebar_price{
   display: flex;
-  align-content: space-between;
-  justify-content: space-between;
+  width: 100%;
+}
+.sidebar_headline_product{
+  display: flex;
+  flex: 3 1 auto;
+  flex-direction: column;
+  padding-right: 48px;
+}
+sidebar_headline_product div{
   padding-bottom: 4px;
-  font-weight: 500;
-  line-height: 28px;
-  font-size: 16px;
 }
 
-#sidebar_product_title{
+.sidebar_headline_price{
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  text-align: right;
+}
+
+.sidebar_product_title{
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.007em;
+  font-size: 28px;
 }
+.sidebar_headline_price_discounted_nl{
+  text-decoration: line-through rgb(141, 141, 141);
+  color: rgb(141, 141, 141);
+}
+
 
 /* COLOR WAY________________________________ */
 
@@ -109,16 +123,26 @@ grid-gap: 10px;
 #colorway_list{
   display: flex;
   flex-wrap: wrap;
+  padding-right: 40px;
 }
 
 #colorway_pic{
   height: 69px;
   width: 69px;
-  background: rgb(72, 72, 72);
-  border: 1px solid black;
   list-style: none;
   margin-right: 4px;
   margin-bottom: 5px;
+  overflow: none;
+  cursor: pointer;
+}
+.colorway_img{
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  filter: contrast(175%) brightness(103%) invert(10%);
+}
+.colorway_img_selected{
+  filter: contrast(175%) brightness(103%) invert(15%);
 }
 
 
@@ -523,7 +547,9 @@ SIDE BAR ACCORDIAN ____________________________________________
 }
 
 
-
+.read_more_modal_close{
+  cursor: pointer;
+}
 
 
 
@@ -549,7 +575,7 @@ SIDE BAR ACCORDIAN ____________________________________________
 }
 
 .purchase_modal_detail_box{
-  position: relative;
+  position: static;
   background-color: #fff;
   height: auto;
   min-width: 500px;

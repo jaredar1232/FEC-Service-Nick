@@ -2,14 +2,17 @@ const db = require("../../database-mongoose/dbHelpers");
 
 module.exports = {
 	getShoes: (req, res) => {
-		db.getAll()
+		let {name} = req.params
+
+
+		db.getAllShoeSet(name)
 			.then(allData => {
 				console.log("Get All Request".cyan, " Success".green);
 				res.status(200).send(allData);
 			})
 			.catch(e => {
 				console.log("Get All Request".cyan, " UnSuccessFull".red);
-				res.status(400).send();
+				res.status(400).send(e);
 			});
 	},
 	getOneShoe: (req, res) => {
@@ -17,11 +20,11 @@ module.exports = {
 		console.log(name);
 		db.getOne(name)
 			.then(allData => {
-				console.log("Get All Request".cyan, " Success".green);
+				console.log("Get One Request".cyan, " Success".green);
 				res.status(200).send(allData);
 			})
 			.catch(e => {
-				console.log("Get All Request".cyan, " UnSuccessFull".red);
+				console.log("Get One Request".cyan, " UnSuccessFull".red);
 				res.status(400).send();
 			});
 	},
