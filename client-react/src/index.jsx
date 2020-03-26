@@ -39,11 +39,10 @@ class App extends React.Component {
 
 	componentDidMount() {
 		this.getShoe();
-		window.location.href = "http://localhost:3000/api/shoes/testers";
 	}
 
 	getShoe() {
-		Axios.get(`http://localhost:3000/api/shoes/react`)
+		Axios.get(`http://localhost:3002/api/shoes/react`)
 			.then(response => {
 				this.setState({
 					currentShoe: response.data
@@ -54,7 +53,7 @@ class App extends React.Component {
 
 	//Pass a function down to sidebar color way that will send a get request
 	getShoeColorData(id, color) {
-		Axios.get(`http://localhost:3000/shoes/${id}/${color}`)
+		Axios.get(`http://localhost:3002/shoes/${id}/${color}`)
 			.then(data => {})
 			.catch(e => window.alert("Something Fucked Up"));
 	}

@@ -21,5 +21,4 @@ router
 
 router.route("/shoes/:_id/:color").get(/* getRestOfColors */);
 
-router.route("/shoes/testers").get(controller.tester);
 module.exports = router;
