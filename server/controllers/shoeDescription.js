@@ -137,9 +137,22 @@ const cruzr = [["MADE TO KEEP YOU MOVING.", "Designed for steady, easy-paced mov
 
 
 
+//Nike Joyride CC
+["UNPARALLELED COMFORT EVERY DAY.",
+"Lounge wherever you go and let the Nike Joyride CC take you into a new world of cozy by placing your feet directly on the soft cushioning of its innovative bead-pods. Bold color-blocking and exaggerated textures add unrivaled depth to your fun, edgy attitude."]
 
+["Innovative Comfort","With Nike Joyride technology, pods filled with tiny foam beads conform to your foot for underfoot comfort."]
 
+["All-Day Wear", "Lightweight Cushlon foam midsole feels comfortable for all-day wear."]
 
+["Playful Attitude", "Stretchy upper features stitched-on overlays and bold colors for a snug feel with attitude."]
+
+/*
+More Benefits
+    Padded collar feels soft and comfortable.
+    Pull tab on heel and tongue provides ease of entry.
+    Shown: Vast Grey/Atmosphere Grey/Thunder Grey/Blue Hero
+    Style: AO1742-004 */
 
 
 

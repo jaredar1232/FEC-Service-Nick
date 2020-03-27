@@ -39,6 +39,10 @@ grid-gap: 10px;
 #nyke_product_display{
   display: flex;
   flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
   margin-left: 4px;
   margin-right: -8px;
   margin-top: 44px;

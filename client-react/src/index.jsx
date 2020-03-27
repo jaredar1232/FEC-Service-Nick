@@ -10,6 +10,9 @@ import Fade from "./components/Portal&animation/Fade.jsx";
 
 import shoeExample from "./mockData.js";
 
+
+
+
 class App extends React.Component {
 	constructor() {
 		super();
@@ -43,7 +46,7 @@ class App extends React.Component {
 	getShoe() {
 		const currentPath = window.location.pathname
 
-		Axios.get(`/api/shoes/Nike Zoom WildHorse 4 Shield`)
+		Axios.get(`/api/shoes/Nike Odyssey React JoyRide CC 2`)
 			.then(response => {
 				console.log(response.data)
 
@@ -105,7 +108,7 @@ class App extends React.Component {
 			currentOrder: currentState,
 			validOrder: true
 		 });
-		console.log(this.state.currentOrder);
+		//console.log(this.state.currentOrder);
 	}
 
 
@@ -135,4 +138,4 @@ class App extends React.Component {
 	}
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById("app_nick"));
