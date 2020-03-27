@@ -2,10 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Axios from "axios";
 
-import PurchaseModal from "./components/PurchaseModal.jsx";
+import PurchaseModal from "./components/modals/PurchaseModal.jsx";
 import SideBar from "./components/sidebar/SideBar.jsx";
 import NykeMain from "./components/NykeMain/NykeMain.jsx";
-import Fade from "./components/Fade.jsx";
+
+import Fade from "./components/Portal&animation/Fade.jsx";
 
 import shoeExample from "./mockData.js";
 
@@ -17,7 +18,8 @@ class App extends React.Component {
 			currentShoe: shoeExample,
 			similiarShoes: [],
 			currentOrder: {},
-			submitOrder: false
+			submitOrder: false,
+			validOrder: null,
 		};
 
 		this.updateCurrentOrder = this.updateCurrentOrder.bind(this);
@@ -26,6 +28,7 @@ class App extends React.Component {
 		this.closePurchaseShoe = this.closePurchaseShoe.bind(this);
 		this.getAllSimiliarShoes = this.getAllSimiliarShoes.bind(this)
 		this.setColorWayShoe = this.setColorWayShoe.bind(this)
+
 	}
 	// const [state, setState] = useState({view: 'Feed'})
 	//const [showPurchaseModal, setShowPurchaseModal] = useState(false)
@@ -36,10 +39,11 @@ class App extends React.Component {
 
 
 
+
 	getShoe() {
 		const currentPath = window.location.pathname
-		console.log(currentPath)
-		Axios.get(`/api/shoes/Nike Zoom Fly 3 Shield`)
+
+		Axios.get(`/api/shoes/Nike Air ZoomX Pegasus 35 Turbo 2`)
 			.then(response => {
 				console.log(response.data)
 
@@ -71,6 +75,11 @@ class App extends React.Component {
 
 
 	purchaseShoe() {
+		if(this.state.validOrder === null){
+			return this.setState({
+				validOrder: false
+			})
+		}
 		this.setState({
 			confirmPurchase: true
 		});
@@ -82,7 +91,8 @@ class App extends React.Component {
 	}
 	closePurchaseShoe() {
 		this.setState({
-			confirmPurchase: false
+			confirmPurchase: false,
+			validOrder: null
 		});
 	}
 	//sizing chart selection
@@ -90,9 +100,14 @@ class App extends React.Component {
 		let { currentOrder } = this.state;
 		const currentState = currentOrder;
 		currentState[orderKey] = orderVal;
-		this.setState({ currentOrder: currentState });
+		this.setState({
+			currentOrder: currentState,
+			validOrder: true
+		 });
 		console.log(this.state.currentOrder);
 	}
+
+
 
 
 	render() {
@@ -106,6 +121,7 @@ class App extends React.Component {
 						updateCurrentOrder={this.updateCurrentOrder}
 						purchaseShoe={this.purchaseShoe}
 						setColorWayShoe={this.setColorWayShoe}
+						isValidOrder={this.state.validOrder}
 					/>
 					{this.state.confirmPurchase && (
 						<Fade show={this.state.confirmPurchase}>

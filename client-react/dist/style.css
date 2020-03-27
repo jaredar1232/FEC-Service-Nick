@@ -17,6 +17,7 @@ grid-gap: 10px;
   width: 100vw;
   height: auto;
   grid-area: body;
+  background-color: rgb(255, 255, 255);
 }
 
 #base_nl{
@@ -51,18 +52,16 @@ grid-gap: 10px;
 .lg_pic_nl{
   height: auto;
   width: 434px;
-  border: 1px solid black;
   margin-bottom: 12px;
   padding-left: 8px;
   padding-right: 4px;
-  background-color: grey;
   overflow: hidden;
   cursor: pointer;
+  filter: invert(5%);
 }
 .lg_pic_nl img{
   max-width: 100%;
   height: auto;
-  border: 1px solid black;
 }
 
 #sidebar_nl{
@@ -132,17 +131,19 @@ sidebar_headline_product div{
   list-style: none;
   margin-right: 4px;
   margin-bottom: 5px;
-  overflow: none;
+  overflow: hidden;
   cursor: pointer;
+  z-index: 0;
 }
 .colorway_img{
-  width: 100%;
-  height: 100%;
-  overflow: none;
-  filter: contrast(175%) brightness(103%) invert(10%);
+  max-width: 100%;
+  height: auto;
+  filter: contrast(175%) brightness(103%) invert(8%);
 }
 .colorway_img_selected{
-  filter: contrast(175%) brightness(103%) invert(15%);
+  max-width: 100%;
+  height: auto;
+  filter: contrast(175%) brightness(103%) invert(20%);
 }
 
 
@@ -159,7 +160,9 @@ sidebar_headline_product div{
 #size_grid{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: .4rem;
+  gap: 7px;
+  padding: 1px;
+  border-radius: 4px;
 }
 
 
@@ -256,14 +259,16 @@ sidebar_headline_product div{
 
 
 .favorite{
-  cursor: default;
+  cursor: pointer;
   margin-top: 12px;
   box-shadow:
   rgb(204, 204, 204) 0px 1px 0px 0px inset,
   rgb(204, 204, 204) -1px 0px 0px 0px inset,
   rgb(204, 204, 204) 0px -1px 0px 0px inset,
   rgb(204, 204, 204) 1px 0px 0px 0px inset;
-
+}
+.favorite:hover{
+  box-shadow: rgb(204, 204, 204) 0px 1.5px 0px 0px inset, rgb(204, 204, 204) -1.5px 0px 0px 0px inset, rgb(204, 204, 204) 0px -1.5px 0px 0px inset, rgb(204, 204, 204) 1.5px 0px 0px 0px inset;
 }
 
 /*  Description________________________________ */
@@ -319,16 +324,29 @@ sidebar_headline_product div{
 SIDE BAR ACCORDIAN ____________________________________________
 */
 
+.jaredConnection{
+  display: grid;
+  grid-template-areas: "shippingbtn"
+                        "jareds_reviews_button"
+  ;
+}
+
+.jaredTester{
+  grid-area: jareds_reviews_button;
+  width: 100%;
+  border: 1px solid black;
+}
+
 
 #sidebar_accordian_wrapper{
   box-shadow: inset 0 -1px 0 0 #E5E5E5;
   margin-top: 40px;
-
 }
 
 
 
 #sidebar_accordian_button{
+  grid-area: shippingbtn;
   box-shadow: inset 0 1px 0 0 #E5E5E5;
   width: 100%;
   padding: 28px 0px;
@@ -379,9 +397,15 @@ SIDE BAR ACCORDIAN ____________________________________________
   animation: rotate ease-in .5s;
 }
 
-@keyframes rotate{
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(180deg);}
+.active_dropdown_nl{
+  overflow-y: hidden;
+  max-height: 200px;
+  transition-duration: .5s;
+  transition-timing-function: ease;
+  transition-property: all;
+}
+.inactive_dropdown_nl {
+  max-height: 0;
 }
 
 
@@ -389,6 +413,37 @@ SIDE BAR ACCORDIAN ____________________________________________
 
 
 
+@keyframes rotateDown{
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(180deg);}
+}
+
+@keyframes rotateUp{
+  0% {transform: rotate(180deg);}
+  100% {transform: rotate(0deg);}
+}
+
+@keyframes slideDownAnim{
+  0%{
+    opacity: 0;
+    height: 0px;
+  }
+  100%{
+    opacity: 1;
+    min-height: 200px;
+  }
+}
+
+@keyframes slideUpAnim {
+  0%{
+    opacity: 1;
+    min-height: 200px;
+  }
+  100% {
+    opacity: 0;
+    height: 0px;
+  }
+}
 
 
 /* MODAL */

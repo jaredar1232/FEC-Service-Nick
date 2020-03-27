@@ -9,7 +9,7 @@ const Fade = ({ show, children }) => {
     if(show) setRender(true)
   }, [show])
 
-  const onAnimationEnd = () => {
+  let onAnimationEnd = () => {
     if(!show) setRender(false);
   }
 

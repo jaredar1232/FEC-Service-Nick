@@ -1,6 +1,6 @@
 import React,{ useState } from 'react'
-import Headline from '../sidebar/headline/Headline.jsx'
-import MainPictureModal from './MainPictureModal.jsx'
+import Headline from '../sidebar/Headline.jsx'
+import MainPictureModal from '../modals/MainPictureModal.jsx'
 
 
 const NykeMain = ({currentShoe}) => {
@@ -13,11 +13,19 @@ const NykeMain = ({currentShoe}) => {
     <div id='nyke_main_nl'>
       <div id='nyke_product_display'>
         {currentShoe.productPictures.map((picSrc, index) => {
+          if(picSrc.includes('videos')){
           return (
-          <div className='lg_pic_nl' onClick={() => setModal(!modal)} key={index}>
-              <img src={picSrc} alt={currentShoe.name} />
-          </div>
+            <div className='lg_pic_nl' onClick={() => setModal(!modal)} key={index}>
+              <video src={picSrc} autoPlay alt={currentShoe.name} loop key={index} id="modal_pic_nl"/>
+            </div>
+            )
+        } else {
+          return (
+            <div className='lg_pic_nl' onClick={() => setModal(!modal)} key={index}>
+              <img src={picSrc} key={index} alt={currentShoe.name} id="modal_pic_nl"/>
+            </div>
           )
+        }
         })}
       </div>
       {modal && <MainPictureModal removeModal={removeModal} currentShoe={currentShoe}/>}

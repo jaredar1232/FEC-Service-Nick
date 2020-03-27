@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const SizingGuide = ({currentShoe, updateCurrentOrder}) => {
+const SizingGuide = ({currentShoe, updateCurrentOrder, isValidOrder}) => {
 /* Will need a request function passed down */
   let sizes = currentShoe.availSizes
   //replace X's with colons
@@ -21,10 +21,10 @@ const SizingGuide = ({currentShoe, updateCurrentOrder}) => {
   return (
     <div id='size_guide_wrapper'>
       <div id='size_guide_header'>
-        <label>Select Size</label>
+        <label style={{color: `${isValidOrder === false ? "#d43f21" : ""}`}}>Select Size</label>
         <a href="https://www.nike.com/us/en_US/sfg/unisex-shoe-sizing-chart">Size Guide</a>
       </div>
-      <ul id='size_grid'>
+      <ul id='size_grid' style={{border: `${isValidOrder === false ? "1px solid #d43f21" : ""}`}}>
         {Object.entries(sizes).map(([key, value]) => (
             <SizeItem
                 value={value}
@@ -36,6 +36,7 @@ const SizingGuide = ({currentShoe, updateCurrentOrder}) => {
             />
         ))}
       </ul>
+      {isValidOrder === false && <span style={{color: "#d43f21"}}>Please Select a Size</span>}
     </div>
   )
 }
@@ -62,22 +63,3 @@ const SizeItem = ({value, size, updateCurrentOrder, selectSize, selected}) => {
 
 export default SizingGuide
 
-
-
-/*
-
-
-          <li
-                  className={`
-                              ${value === true ? `available` : `unavailable`}
-
-                              `}
-                  id='size_item'
-                  key={key}
-                  onClick={() => {updateCurrentOrder('size', key)}}
-                  >
-                    {key}
-                </li>
-
-
-*/
