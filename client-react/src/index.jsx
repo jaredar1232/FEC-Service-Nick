@@ -43,7 +43,7 @@ class App extends React.Component {
 	getShoe() {
 		const currentPath = window.location.pathname
 
-		Axios.get(`/api/shoes/Nike Air ZoomX Pegasus 35 Turbo 2`)
+		Axios.get(`/api/shoes/Nike Zoom WildHorse 4 Shield`)
 			.then(response => {
 				console.log(response.data)
 
@@ -91,6 +91,7 @@ class App extends React.Component {
 	}
 	closePurchaseShoe() {
 		this.setState({
+			currentOrder: {},
 			confirmPurchase: false,
 			validOrder: null
 		});

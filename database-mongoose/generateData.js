@@ -322,6 +322,7 @@ const generateReactShoe = (givenName) => {
   //stacey!!!!
   shoe.type = `${returnShoeType(shoe.gender)} Shoe`
   shoe.collection = shoe.name.split(' ')
+  shoe.colorStyles.forEach(color => shoe.collection.push(color))
   shoe.image = shoe.productPictures[0]
 
   //console.log(shoe)
@@ -417,6 +418,7 @@ let generateZoomShoe = (givenName) => {
   //stacey!!!!
   shoe.type = `${returnShoeType(shoe.gender)} Running Shoe`
   shoe.collection = shoe.name.split(' ')
+  shoe.colorStyles.forEach(color => shoe.collection.push(color))
   shoe.image = shoe.productPictures[0]
 
   //console.log(shoe)
@@ -484,6 +486,7 @@ let generateRandomFreeRunShoe = (givenName) => {
   //stacey!!!!
   shoe.type = `${returnShoeType(shoe.gender)} Running Shoe`
   shoe.collection = shoe.name.split(' ')
+  shoe.colorStyles.forEach(color => shoe.collection.push(color))
   shoe.image = shoe.productPictures[0]
 
   return shoe
@@ -956,8 +959,13 @@ let generateRandomDataSet = (dataSetSize) => {
 
 const writeData = () => {
   let data = generateRandomDataSet(20)
+  let counter = 100
+  data.forEach(shoe => {
+    shoe.nikeID = counter
+    counter++
+    })
   const filePath = './generatedData'
-  fs.writeFile(`${dirPath}/newFile.js`, JSON.stringify(data), (err)=>{
+  fs.writeFile(`${dirPath}/rawUnparsedData.js`, JSON.stringify(data), (err)=>{
     if(err) console.error('FUCKED UP', err)
   })
 }

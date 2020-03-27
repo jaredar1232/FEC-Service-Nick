@@ -8,6 +8,7 @@ let productSchema = mongoose.Schema({
   discountPrice: Number,
   type: String,
   price: Number,
+  nikeID: Number,
   colorStyles: [String],
   productPictures: [String],
   productDetails: {
