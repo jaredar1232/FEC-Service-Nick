@@ -1,10 +1,5 @@
 *{
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  line-height: 24px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 }
 
 /*
@@ -17,12 +12,14 @@ grid-gap: 10px;
   width: 100vw;
   height: auto;
   grid-area: body;
+  line-height: 24px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: rgb(255, 255, 255);
 }
 
 #base_nl{
   display: flex;
-  background-color: #f7f7f7;
+  background-color: rgb(255, 255, 255);
   max-width: 1440px;
   margin: 0px auto;
 }
@@ -30,10 +27,7 @@ grid-gap: 10px;
 
 #nyke_main_nl{
   display: flex;
-  border: 1px solid black;
-  display: flex;
   flex: 2 1 0%;
-
 }
 
 #nyke_product_display{
@@ -70,7 +64,6 @@ grid-gap: 10px;
 
 #sidebar_nl{
   display: flex;
-  border: 1px solid black;
   flex: 1 1 0%;
   flex-direction: column;
 }
@@ -137,17 +130,16 @@ sidebar_headline_product div{
   margin-bottom: 5px;
   overflow: hidden;
   cursor: pointer;
-  z-index: 0;
 }
 .colorway_img{
   max-width: 100%;
   height: auto;
-  filter: contrast(175%) brightness(103%) invert(8%);
+  filter:  brightness(103%) invert(5%);
 }
 .colorway_img_selected{
   max-width: 100%;
   height: auto;
-  filter: contrast(175%) brightness(103%) invert(20%);
+  filter:  brightness(103%) invert(20%);
 }
 
 
@@ -465,6 +457,7 @@ SIDE BAR ACCORDIAN ____________________________________________
   justify-content: center;
   align-items: center;
   padding: 10px;
+  z-index: 30;
 }
 
 #modal_headline{
@@ -519,6 +512,7 @@ SIDE BAR ACCORDIAN ____________________________________________
   max-width: 100%;
   height: 100%;
   background-color: yellow;
+  z-index: 30;
 }
 
 .read_more_modal_wrapper{
@@ -632,6 +626,7 @@ SIDE BAR ACCORDIAN ____________________________________________
   flex-direction: row;
   align-items: flex-start;
   justify-content: right;
+  z-index: 30;
 }
 
 .purchase_modal_detail_box{
@@ -645,6 +640,7 @@ SIDE BAR ACCORDIAN ____________________________________________
   padding-top: 14px;
   margin-right: 8px;
   border: 5px solid black;
+  z-index: 30;
 }
 
 .purchase_modal_headline{

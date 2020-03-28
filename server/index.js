@@ -29,5 +29,5 @@ app.use(express.static(path.join(__dirname + "/../client-react/dist")));
 app.use("/api", router);
 
 app.listen(PORT, () => {
-	console.log(`listening on port ${PORT}`.rainbow);
+	console.log(`listening on port`.green, `${PORT}`.cyan);
 });

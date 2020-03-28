@@ -11,6 +11,20 @@ import Fade from "./components/Portal&animation/Fade.jsx";
 import shoeExample from "./mockData.js";
 
 
+/*
+Have to detect changes in the address bar
+
+used history.pushState to change the URL so it doesn't refresh the browser
+
+looks like you can detect an address change using something like this:
+
+window.addEventListener("hashchange", myFunction());
+        function myFunction() {
+            alert(`${location.href}`);
+        }
+*/
+
+
 
 
 class App extends React.Component {
@@ -26,52 +40,83 @@ class App extends React.Component {
 		};
 
 		this.updateCurrentOrder = this.updateCurrentOrder.bind(this);
-		this.getShoe = this.getShoe.bind(this);
+		this.getShoeSet = this.getShoeSet.bind(this);
 		this.purchaseShoe = this.purchaseShoe.bind(this);
 		this.closePurchaseShoe = this.closePurchaseShoe.bind(this);
-		this.getAllSimiliarShoes = this.getAllSimiliarShoes.bind(this)
+
 		this.setColorWayShoe = this.setColorWayShoe.bind(this)
 
 	}
 	// const [state, setState] = useState({view: 'Feed'})
 	//const [showPurchaseModal, setShowPurchaseModal] = useState(false)
 
+	//testurl
+	//  /api/shoes/Nike React HyperSet Rise 4
+	//  /api/shoes/Nike Odyssey React JoyRide CC 2
 	componentDidMount() {
-		this.getShoe();
+		this.getShoeSet();
+
+		function searchForProductWhenHashChanges() {
+			const pathArray = window.location.pathname.split('/');
+			console.log(window.location.href)
+			console.log(pathArray, 'THIS IS THE PATH ARRAY')
+			//this.getShoeSet(pathArray[pathArray.length - 1])
+		}
+
+
+		window.addEventListener("hashchange", ()=>{
+			console.log('THE HASH IS CHANGING', window.location.hash)
+			let answer  = window.location.hash.split('#')
+			this.getShoeSet(answer[1]);
+		});
+
+
 	}
 
 
 
 
-	getShoe() {
-		const currentPath = window.location.pathname
+	getShoeSet(id) {
 
-		Axios.get(`/api/shoes/Nike Odyssey React JoyRide CC 2`)
+		if(id === undefined){
+			id = 102
+		}
+
+
+		Axios.get(`/api/shoe/${id}`)
 			.then(response => {
-				console.log(response.data)
-
-				this.setState({
-					currentShoe: response.data[0],
-					shoeSet: response.data
-				});
+				console.log("recieved", response.data.name)
+				let shoe = response.data
+				return shoe
 			})
+
+			.then(shoe => {
+				Axios.get(`/api/shoes/${shoe.name}`)
+					.then(shoeset => {
+						console.log('recieved an object', shoeset.data)
+						this.setState({
+							currentShoe: shoe,
+							shoeSet: shoeset.data
+						});
+					})
+			})
+
 			.catch((e) => {
-				window.alert("Fetch Request For Nike Main Component Failed")
+				window.alert("Fetch Request For Nike Main Component Failed, SoMeThInGwEnTtErRiBlYwRoNg")
 				this.setState({
 					currentShoe: shoeExample,
 				})
 			});
 	}
 
-	getAllSimiliarShoes(){
-		Axios.get(`/api/shoes/`)
-	}
+
 
 
 	setColorWayShoe(shoe){
 		this.setState({
 			currentShoe: shoe
 		})
+		//going to set the url with this function
 	}
 
 

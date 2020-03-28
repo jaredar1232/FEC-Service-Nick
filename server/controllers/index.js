@@ -1,55 +1,34 @@
 const db = require("../../database-mongoose/dbHelpers");
 
 module.exports = {
+
+	//fetch a single shoe by ID given
+	getOneShoe: (req, res) => {
+		let { nikeID } = req.params;
+		console.log(`QUERYING DB FOR SINGLE SHOE WITH ID OF`.green, `${nikeID}`.cyan);
+		db.getOne(nikeID)
+			.then(shoe => {
+				console.log("Get One SHOE".green, " Success".cyan);
+				res.status(200).send(shoe);
+			})
+			.catch(e => {
+				console.log("Get One SHOE".red, " UnSuccessFull".red);
+				res.status(400).send();
+			});
+	},
+
+	//query DB and return all shoes with matching name
 	getShoes: (req, res) => {
 		let {name} = req.params
-
-
+		console.log(`QUERYING DB FOR ALL`.green, `${name}`.cyan, `SHOES`.green)
 		db.getAllShoeSet(name)
 			.then(allData => {
-				console.log("Get All Request".cyan, " Success".green);
+				console.log("QUERY SHOESET".green, " Success".cyan);
 				res.status(200).send(allData);
 			})
 			.catch(e => {
-				console.log("Get All Request".cyan, " UnSuccessFull".red);
+				console.log("QUERY SHOESET".red, " UnSuccessFull".red);
 				res.status(400).send(e);
-			});
-	},
-	getOneShoe: (req, res) => {
-		let { name } = req.params;
-		console.log(name);
-		db.getOne(name)
-			.then(allData => {
-				console.log("Get One Request".cyan, " Success".green);
-				res.status(200).send(allData);
-			})
-			.catch(e => {
-				console.log("Get One Request".cyan, " UnSuccessFull".red);
-				res.status(400).send();
-			});
-	},
-	deleteShoes: (req, res) => {
-		//massage data
-		db.deleteOne()
-			.then(() => {
-				console.log("Delete Request".cyan, " Success".green);
-				res.status(200).send();
-			})
-			.catch(e => {
-				console.log(e, "Delete Request".cyan, " UnSuccessFul".red);
-				res.status(400).send();
-			});
-	},
-	updateShoes: (req, res) => {
-		//massage data
-		db.updateShoe()
-			.then(() => {
-				console.log("Update Request".cyan, " Success".green);
-				res.status(200).send();
-			})
-			.catch(e => {
-				console.log(e, "Update Request".cyan, " UnSuccessFul".red);
-				res.status(400).send();
 			});
 	}
 };

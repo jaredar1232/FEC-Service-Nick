@@ -15,7 +15,6 @@ const MainPictureModal = ({removeModal, currentShoe}) => {
           </div>
           <div className='modal_pic_scroll'>
             {currentShoe.productPictures.map((picSrc, index) => {
-              console.log('YO')
               if(picSrc.includes('videos')){
                 return (
                   <video src={picSrc} autoPlay loop key={index} id="modal_pic_nl" alt={currentShoe.name} />

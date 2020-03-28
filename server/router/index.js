@@ -2,21 +2,18 @@ const router = require("express").Router();
 const controller = require("../controllers");
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
-	console.log("Time: ", Date.now());
+	console.log(`Time: `.green, `${Date.now()}`.green);
 	next();
 });
 
-router
-	.route("/shoes")
-	.get(controller.getShoes)
 
+
+//get shoe by ID
+router.route("/shoe/:nikeID").get(controller.getOneShoe)
+
+//get shoeset by name
 router.route("/shoes/:name").get(controller.getShoes);
 
-// define the about route
-router
-	.route("/shoes/:_id")
-	.delete(controller.deleteShoes)
-	.put(controller.updateShoes);
 
 
 
