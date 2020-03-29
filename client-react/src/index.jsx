@@ -79,7 +79,7 @@ class App extends React.Component {
 	getShoeSet(id) {
 
 		if(id === undefined){
-			id = 102
+			id = 160
 		}
 
 

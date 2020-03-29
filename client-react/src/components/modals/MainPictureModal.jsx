@@ -15,16 +15,16 @@ const MainPictureModal = ({removeModal, currentShoe}) => {
           </div>
           <div className='modal_pic_scroll'>
             {currentShoe.productPictures.map((picSrc, index) => {
-              if(picSrc.includes('videos')){
-                return (
-                  <video src={picSrc} autoPlay loop key={index} id="modal_pic_nl" alt={currentShoe.name} />
-                  )
-              } else {
+              if(picSrc.includes('.jpg')){
                 return (
                   <img src={picSrc} key={index} id="modal_pic_nl" alt={currentShoe.name} />
                 )
-              }
-            })}
+              } else if (picSrc.includes('.webm')){
+                  return (
+                    <video src={picSrc} autoPlay loop key={index} id="modal_pic_nl" alt={currentShoe.name} />
+                  )
+                }
+              })}
           </div>
         </div>
     </div>
