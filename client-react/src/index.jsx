@@ -116,7 +116,9 @@ class App extends React.Component {
 		this.setState({
 			currentShoe: shoe
 		})
+		console.log(shoe.nikeID)
 		//going to set the url with this function
+		window.location.hash = shoe.nikeID;
 	}
 
 

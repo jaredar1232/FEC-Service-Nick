@@ -344,7 +344,7 @@ SIDE BAR ACCORDIAN ____________________________________________
 
 #sidebar_accordian_button{
   grid-area: shippingbtn;
-  box-shadow: inset 0 1px 0 0 #E5E5E5;
+
   width: 100%;
   padding: 28px 0px;
   background: transparent;
@@ -352,6 +352,8 @@ SIDE BAR ACCORDIAN ____________________________________________
   font-weight: 500;
   font-size: 16px;
   border: none;
+  border-bottom: 1px solid #E5E5E5;
+  box-shadow: inset 0 1px 0 0 #E5E5E5;
   background: transparent;
   cursor: pointer;
 }
