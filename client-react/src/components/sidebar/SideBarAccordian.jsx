@@ -1,5 +1,6 @@
 import React from 'react'
 import SlideDown from '../Portal&animation/SlideDown.jsx'
+import downArrow  from '../../images/DownArrow.png'
 
 //https://www.jayfreestone.com/writing/react-portals-with-hooks/
 
@@ -35,7 +36,12 @@ class SideBarAccordian extends React.Component{
           <button id='sidebar_accordian_button' onClick={this.setDropDown}>
             <div className='sidebar_accordian_button_2'>
               <div><h3>Free Shipping & Returns</h3></div>
-              <div className={`${this.state.dropdown ? "dropdown_rotate" : ""}`}><span>^</span></div>
+              <div>
+                  {this.state.dropdown ?
+                    <img className="default-arrow-jr" src={downArrow} style={{ transform: "rotate(180deg)" }}></img> :
+                    <img className="default-arrow-jr" src={downArrow}></img>
+                  }
+             </div>
             </div>
               <SlideDown show={this.state.dropdown}>
                 <div>

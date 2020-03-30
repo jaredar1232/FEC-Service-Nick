@@ -338,6 +338,8 @@ SIDE BAR ACCORDIAN ____________________________________________
 #sidebar_accordian_wrapper{
   box-shadow: inset 0 -1px 0 0 #E5E5E5;
   margin-top: 40px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
 }
 
 
