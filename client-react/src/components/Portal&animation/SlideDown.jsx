@@ -17,7 +17,7 @@ const SlideDown = ({ show, children }) => {
     slideDown && (
       <div
         onAnimationEnd={onAnimationEnd}
-        style={{ animation: `${show ? "slideDownAnim" : "slideUpAnim"} 1s` }}
+        style={{ animation: `${show ? "slideDownAnim" : "slideUpAnim"} 500` }}
         id='sidebar_accordian_contents'
         className={`${slideDown ? "active_dropdown_nl" : "inactive_dropdown_nl"}`}
       >

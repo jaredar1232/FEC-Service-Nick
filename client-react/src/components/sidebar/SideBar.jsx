@@ -11,7 +11,7 @@ const SideBar = ({ currentShoe, updateCurrentOrder, purchaseShoe, shoeSet, setCo
 		<div id='sidebar_nl'>
 			<div id='sidebar_contents'>
 				<Headline currentShoe={currentShoe} />
-				<Colorway currentShoe={currentShoe} shoeSet={shoeSet} setColorWayShoe={setColorWayShoe}/>
+				<Colorway currentShoe={currentShoe} shoeSet={shoeSet} setColorWayShoe={setColorWayShoe} currentShoe={currentShoe}/>
 				<SizingGuide currentShoe={currentShoe} updateCurrentOrder={updateCurrentOrder} isValidOrder={isValidOrder}/>
 				<BuyButtons currentShoe={currentShoe} purchaseShoe={purchaseShoe} />
 				<Description currentShoe={currentShoe} />

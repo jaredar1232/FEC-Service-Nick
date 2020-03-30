@@ -35,11 +35,11 @@ class SideBarAccordian extends React.Component{
 
           <button id='sidebar_accordian_button' onClick={this.setDropDown}>
             <div className='sidebar_accordian_button_2'>
-              <div><h3>Free Shipping & Returns</h3></div>
-              <div>
+              <div>Free Shipping & Returns</div>
+              <div className='accordian-arrow'>
                   {this.state.dropdown ?
-                    <img className="default-arrow-jr" src={downArrow} style={{ transform: "rotate(180deg)" }}></img> :
-                    <img className="default-arrow-jr" src={downArrow}></img>
+                    <img className="default-arrow-nl" src={downArrow} style={{ transform: "rotate(180deg)" }}></img> :
+                    <img className="default-arrow-nl" src={downArrow}></img>
                   }
              </div>
             </div>

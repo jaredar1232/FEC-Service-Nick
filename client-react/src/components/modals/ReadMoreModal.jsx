@@ -5,8 +5,7 @@ const ReadMoreModal = ({removeModal, currentShoe}) => {
   return (
     <div className='read_more_modal'>
           <div className='read_more_modal_headline'>
-            <button onClick={removeModal} >
-              <div className='read_more_modal_headline_content'>
+              <div className='read_more_modal_headline_content'onClick={removeModal}>
                 <div className='read_more_modal_pic_wrapper'>
                   <img className='read_more_modal_pic'src={currentShoe.productPictures[0]}></img>
                 </div>
@@ -15,7 +14,6 @@ const ReadMoreModal = ({removeModal, currentShoe}) => {
                   <p>$ {currentShoe.price}</p>
                 </div>
               </div>
-            </button>
             <div className='read_more_modal_close' onClick={removeModal}>X</div>
           </div>
 

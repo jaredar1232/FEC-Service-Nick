@@ -365,6 +365,8 @@ SIDE BAR ACCORDIAN ____________________________________________
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 #sidebar_accordian_contents{
@@ -390,6 +392,15 @@ SIDE BAR ACCORDIAN ____________________________________________
 }
 
 
+.accordian-arrow{
+  width: 25px;
+  height: 25px;
+}
+.default-arrow-nl{
+  width:100%;
+  height:auto;
+}
+
 .dropdown_rotate_reverse{
   animation: rotate ease-in .5s reverse;
 }
@@ -397,6 +408,8 @@ SIDE BAR ACCORDIAN ____________________________________________
 .dropdown_rotate{
   animation: rotate ease-in .5s;
 }
+
+
 
 .active_dropdown_nl{
   overflow-y: hidden;
@@ -407,21 +420,6 @@ SIDE BAR ACCORDIAN ____________________________________________
 }
 .inactive_dropdown_nl {
   max-height: 0;
-}
-
-
-
-
-
-
-@keyframes rotateDown{
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(180deg);}
-}
-
-@keyframes rotateUp{
-  0% {transform: rotate(180deg);}
-  100% {transform: rotate(0deg);}
 }
 
 @keyframes slideDownAnim{
@@ -472,7 +470,7 @@ SIDE BAR ACCORDIAN ____________________________________________
 
 .close_modal{
   left: 98%;
-  top: 2%;
+  top: 5%;
   width: 100%;
   font-size: 20px;
   font-weight: 600;
@@ -499,6 +497,7 @@ SIDE BAR ACCORDIAN ____________________________________________
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+  filter: brightness(103%)
 }
 
 
@@ -515,13 +514,13 @@ SIDE BAR ACCORDIAN ____________________________________________
   width: 100%;
   max-width: 100%;
   height: 100%;
-  background-color: yellow;
   z-index: 30;
 }
 
 .read_more_modal_wrapper{
   width: 100%;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -536,36 +535,56 @@ SIDE BAR ACCORDIAN ____________________________________________
   z-index: 9;
   left: 0;
   top: 0;
+  flex: 0 0 auto;
 }
 
-.read_more_modal_headline button{
+/* .read_more_modal_headline button{
   background: transparent;
   border: none;
-  padding: 0px 8px 0px 8px;
-}
+} */
 
 .read_more_modal_headline_content{
   display: flex;
   align-items: center;
+  justify-content: start;
+  padding: 0px 8px 0px 8px;
 }
 .read_more_modal_pic_wrapper{
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   background-color: #111111;
   cursor: pointer;
+  overflow: none;
 }
 
 .read_more_modal_pic{
   width: 100%;
-  height: 100%;
+  height: auto;
+  filter: brightness(103%);
 }
+
+#readMore_headline_text{
+  margin-top: 5px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Helvetica Neue";
+}
+
+
+.read_more_modal_close{
+  cursor: pointer;
+}
+
+
 
 
 .read_more_modal_guts{
   /* cover the modal */
   width: 100%;
   display: flex;
-
   /* spacing as needed */
   padding: 0 15% 40px 15%;
   /* let it scroll */
@@ -573,7 +592,6 @@ SIDE BAR ACCORDIAN ____________________________________________
   height: 100%;
   overflow-y: scroll;
   z-index: 8;
-  border: 1px solid black;
 }
 
 .read_more_modal_headline_info{
@@ -590,24 +608,9 @@ SIDE BAR ACCORDIAN ____________________________________________
 }
 
 .read_more_modal_headline_info p {
-  margin-top: 16px;
-  margin-bottom: 11px;
+  margin-top: 5px;
 }
 
-
-#readMore_headline_text{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: "Helvetica Neue";
-}
-
-
-.read_more_modal_close{
-  cursor: pointer;
-}
 
 
 
@@ -705,6 +708,13 @@ SIDE BAR ACCORDIAN ____________________________________________
 .fa-check-circle{
   color: rgb(20, 172, 20);
 }
+
+
+.fade-in-modal{
+  z-index: 30;
+}
+
+
 
 
 @keyframes fadeIn{
