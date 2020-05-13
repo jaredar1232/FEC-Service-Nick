@@ -1,13 +1,9 @@
-# Project Name
+# Project Nyke
 
-> Project description
+> Nike Product Viewer Module
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
 
 ## Table of Contents
 
@@ -17,14 +13,11 @@
 
 ## Usage
 
-> Some usage instructions
+> This is the product viewer module for my teams nike mock up and should be added to the Services folder in the proxy. For proper pathing this folder should be named "FEC-Service-Nick"
 
 ## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
+- MongoDB
 
 ## Development
 
@@ -32,8 +25,5 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 From within the root directory:
 
-```sh
-npm install -g webpack
 npm install
-```
 
